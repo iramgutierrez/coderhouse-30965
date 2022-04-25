@@ -10,7 +10,7 @@ function foo () {
   }
 }
 
-foo() */
+foo()*/
 
 /*function foo2 () {
   let i = 0
@@ -31,15 +31,17 @@ foo2() */
   console.log(i)
 }
 
-foo3() */
+foo3()*/
 
 /*const a = 'hola'
 
-a = 'adios' */
+a = 'adios'*/
 
 const user = {
   name: 'Iram'
 }
+
+user.name = 'Uriel'
 user.lastname = 'Gutierrez'
 delete user.name
 
