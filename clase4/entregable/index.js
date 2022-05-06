@@ -76,6 +76,8 @@ class Contenedor {
   }
  }
 
+ module.exports = Contenedor
+
  ;(async () => {
   const contenedor = new Contenedor('productos.txt')
   const newProduct = {
