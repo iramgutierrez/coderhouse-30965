@@ -1,0 +1,12 @@
+/api/users
+HTTP 1.1 200 OK
+HTTP 1.1 304 Not Modified
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Iram",
+      "courses": "/api/courses?userId=1"
+    }
+  ]
+}
