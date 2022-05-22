@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+</head>
+<body>
+  <div class="container">
+    <header> 
+      <%- include('./partials/header', { current: 'form' }) %>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+        <h2>Ingrese sus datos</h2>
+        <form method="POST" action="/personas">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" name="apellido">
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="text" class="form-control" name="edad">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <div>
+          <% if (personas.length) { %>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Edad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% personas.forEach((persona, index) => { %>
+                <tr>
+                  <th scope="row"><%= index + 1%></th>
+                  <td><%= persona.nombre %></td>
+                  <td><%= persona.apellido %></td>
+                  <td><%= persona.edad %></td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          <% } else { %>
+            No se encontraron datos
+          <% } %>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  
+</body>
+</html>

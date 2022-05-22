@@ -1,0 +1,10 @@
+//- datos.pug
+extends index.pug
+
+block content
+  h1(style={color: 'blue'})!=title
+  meter(
+    value=value
+    min=min
+    max=max
+  )
