@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2022-12-12 00:10:00",
+    "productos": [
+      {
+        "id": "1",
+        "nombre": "Coca Cola"
+      },
+      {
+        "id": "3",
+        "nombre": "Sabritas"
+      }
+    ]    
+  }
+]
