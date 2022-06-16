@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "nombre": "Coca Cola",
+    "precio": 12,
+    "descripcion": "Refresco de cola",
+    "stock": 100,
+    "category_id": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Agua natural",
+    "precio": 10,
+    "descripcion": "Botella de 1L.",
+    "stock": 100,
+    "category_id": 1,
+    "marca": "Mi marca"
+  },
+  {
+    "id": 3,
+    "nombre": "Galletas",
+    "precio": 8.50,
+    "stock": 80,
+    "presentaciones": [
+      { "description": "Paquete de 10", "price": 8 }, 
+      { "description": "Paquete de 20", "price": 15 }, 
+      { "description": "Paquete de 30", "price": 22 } 
+    ],
+    "category_id": 2
+  }
+]
