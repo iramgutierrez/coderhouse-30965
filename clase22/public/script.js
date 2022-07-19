@@ -20,5 +20,5 @@ fetch('http://localhost:8080/blog')
   .then(blog => {
     const rawData = normalizr.denormalize(blog.result, blogSchema, blog.entities)
 
-    console.log(rawData)
+    console.log(rawData.length, blog.length)
   })
