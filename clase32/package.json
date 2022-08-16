@@ -1,0 +1,19 @@
+{
+  "name": "clase32",
+  "version": "1.0.0",
+  "description": "",
+  "main": "artillery.js",
+  "scripts": {
+    "test": "node benchmark.js",
+    "start": "0x profiler.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "0x": "^5.4.0",
+    "artillery": "^2.0.0-22",
+    "autocannon": "^7.9.0",
+    "express": "^4.18.1"
+  }
+}

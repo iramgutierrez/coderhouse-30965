@@ -1,0 +1,4 @@
+[2022-08-09T09:25:17.347] [INFO] archivo2 - Log de info
+[2022-08-09T09:25:17.349] [WARN] archivo2 - Log de warn
+[2022-08-09T09:25:17.349] [ERROR] archivo2 - Log de error
+[2022-08-09T09:25:17.350] [FATAL] archivo2 - Log de fatal

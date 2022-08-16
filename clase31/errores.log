@@ -1,0 +1,18 @@
+[2022-08-09T09:40:13.575] [ERROR] prod - Se recibio un número inválido: asdfasdf
+[2022-08-09T09:41:16.995] [ERROR] prod - Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+    at listenInCluster (node:net:1382:12)
+    at Server.listen (node:net:1469:7)
+    at Function.listen (/Users/iramgutierrez/iram/coderhouse/30965/clases/clase31/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/iramgutierrez/iram/coderhouse/30965/clases/clase31/log4js-desafio.js:32:4)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 8080
+}

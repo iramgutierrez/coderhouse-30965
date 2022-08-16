@@ -1,0 +1,100 @@
+Statistical profiling result from bloq-v8.log, (24871 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     31    0.1%          /usr/lib/system/libsystem_pthread.dylib
+     19    0.1%          /usr/lib/system/libsystem_c.dylib
+     15    0.1%          /usr/lib/system/libsystem_platform.dylib
+      7    0.0%          /usr/lib/system/libsystem_malloc.dylib
+      7    0.0%          /usr/lib/libc++.1.dylib
+      2    0.0%          /usr/lib/libc++abi.dylib
+      1    0.0%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.0%          /usr/lib/system/libdyld.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.0%  LazyCompile: *pushAsyncContext node:internal/async_hooks:529:26
+      1    0.0%    0.0%  LazyCompile: *next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.0%  Function: ^resume_ node:internal/streams/readable:985:17
+      1    0.0%    0.0%  Function: ^process_params /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/index.js:338:47
+      1    0.0%    0.0%  Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.0%  Function: ^processPromiseRejections node:internal/process/promises:203:34
+      1    0.0%    0.0%  Function: ^getHighWaterMark node:internal/streams/state:19:26
+      1    0.0%    0.0%  Function: ^fastparse /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  Function: ^createHttpError /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/send/index.js:977:26
+      1    0.0%    0.0%  Function: ^createError /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/http-errors/index.js:49:22
+      1    0.0%    0.0%  Function: ^callback node:internal/streams/writable:550:44
+      1    0.0%    0.0%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    0.0%  Function: ^Timeout node:internal/timers:167:17
+
+ [C++]:
+   ticks  total  nonlib   name
+  24458   98.3%   98.7%  t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+     81    0.3%    0.3%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     58    0.2%    0.2%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     40    0.2%    0.2%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     35    0.1%    0.1%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     29    0.1%    0.1%  T __kernelrpc_mach_port_get_refs
+     16    0.1%    0.1%  T _posix_spawn_file_actions_adddup2
+      4    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      4    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  T _task_restartable_ranges_register
+      4    0.0%    0.0%  T _mach_port_allocate
+      3    0.0%    0.0%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T _task_restartable_ranges_synchronize
+      2    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T _task_name_for_pid
+      2    0.0%    0.0%  T ___getrlimit
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t unsigned long std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::__erase_unique<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::BaseObject::decrease_refcount()
+      1    0.0%    0.0%  t node::AsyncHooks::pop_async_context(double)
+      1    0.0%    0.0%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      1    0.0%    0.0%  T node::InternalCallbackScope::Close()
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      1    0.0%    0.0%  T _proc_set_dirty
+      1    0.0%    0.0%  T _posix_spawnattr_setmacpolicyinfo_np
+      1    0.0%    0.0%  T _pid_for_task
+      1    0.0%    0.0%  T _os_packet_get_group_end
+
+ [Summary]:
+   ticks  total  nonlib   name
+     14    0.1%    0.1%  JavaScript
+  24768   99.6%   99.9%  C++
+     38    0.2%    0.2%  GC
+     83    0.3%          Shared libraries
+      6    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  24730  100.0%   99.4%  TOTAL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  24458   98.3%  t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+  24261   99.2%    t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+  23625   97.4%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  23523   99.6%        Function: ^<anonymous> /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/profiler.js:32:23
+  23523  100.0%          Function: ^handle /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/layer.js:86:49
+  23267   98.9%            Function: ^next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/route.js:116:16
+    256    1.1%            LazyCompile: ~next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/route.js:116:16
+    460    1.9%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+    409   88.9%        LazyCompile: ~<anonymous> /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/profiler.js:32:23
+    306   74.8%          Function: ^handle /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/layer.js:86:49
+    306  100.0%            LazyCompile: ~next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/route.js:116:16
+    103   25.2%          LazyCompile: ~handle /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/layer.js:86:49
+    103  100.0%            LazyCompile: ~next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/route.js:116:16
+     51   11.1%        LazyCompile: ~<anonymous> /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/profiler.js:14:21
+     51  100.0%          LazyCompile: ~handle /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/layer.js:86:49
+     51  100.0%            LazyCompile: ~next /Users/iramgutierrez/iram/coderhouse/30965/clases/clase32/node_modules/express/lib/router/route.js:116:16
+
