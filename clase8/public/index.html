@@ -8,14 +8,32 @@
 </head>
 <body>
   <h2>Single File</h2>
-  <form action="/uploadFile" method="POST" enctype="multipart/form-data">
-    <input type="file" name="myFile">
+  <form action="http://localhost:8080/uploadFile" method="POST" >
+    Nombre: <input type="text" name="name"><br>
+    <!-- Foto: <input type="file" name="myFile"><br>-->
     <input type="submit" value="Upload a file">
   </form>
-  <h2>Multiple files</h2>
+  <!--<h2>Multiple files</h2>
   <form action="/uploadMultiple" enctype="multipart/form-data" method="POST">
     Select images: <input type="file" name="myFiles" multiple>
     <input type="submit" value="Upload files">
-  </form>
+  </form>-->
+
+  <script>
+
+    document.querySelector("form").on("submit", (e) => {
+      e.preventDefault()
+      const name = document.querySelector("input[name=name]")
+
+      const data = {
+        name
+      }
+
+      fetch("http://localhost:8080/uploadFile", {
+        method: 'POST',
+        body: JSON.stringify(data)
+      })
+    })
+  </script>
 </body>
 </html>

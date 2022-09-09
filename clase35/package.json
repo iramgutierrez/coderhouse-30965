@@ -1,0 +1,18 @@
+{
+  "name": "clase35",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ethereal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "minimist": "^1.2.6",
+    "nodemailer": "^6.7.8",
+    "twilio": "^3.80.1"
+  }
+}

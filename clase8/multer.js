@@ -14,13 +14,16 @@ const upload = multer({ storage })
 
 const app = express()
 
-app.use('/static', express.static(__dirname + '/public'))
+// app.use('/static', express.static(__dirname + '/public'))
 app.use('/uploads', express.static(__dirname + '/uploads'))
 
 
 app.get('', (req, res) => res.json({ status: 'ok' }))
 
 app.post('/uploadFile', upload.single('myFile'), (req, res) => {
+  const user = { ...req.body, imageProfile: req.file.filename }
+  return res.json(user)
+
   const file = req.file
 
   if (!file) {

@@ -52,6 +52,8 @@ passport.use('login', new LocalStrategy((username, password, done) => {
 passport.use('signup', new LocalStrategy({
   passReqToCallback: true
 }, (req, username, password, done) => {
+  const user = { ...req.body, imageProfile: req.file.filename }
+  
   return User.findOne({ username })
     .then(user => {
       if (user) {
@@ -62,6 +64,7 @@ passport.use('signup', new LocalStrategy({
       newUser.username = username
       newUser.password = createHash(password)
       newUser.email = req.body.email
+      newUser.avatar = req.file.filename
 
       return newUser.save()
     })
@@ -100,7 +103,7 @@ app.get('/signup', (req, res) => {
   return res.render('signup', { message: req.flash('error') })
 })
 
-app.post('/signup', passport.authenticate('signup', {
+app.post('/signup', upload.single('myFile'), passport.authenticate('signup', {
   successRedirect: '/',
   failureRedirect: '/signup',
   failureFlash: true
