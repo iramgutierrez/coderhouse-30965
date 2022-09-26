@@ -1,0 +1,28 @@
+# News
+components:
+  schemas:
+    News:
+      type: Object
+      required:
+        - id
+        - title
+        - author
+        - createdAt
+      properties:
+        id:
+          type: string
+          description: Id de la noticia
+        title:
+          type: string
+          description: Titulo de la notica
+        author:
+          type: string
+          description: Autor de la noticia
+        createdAt:
+          type: string
+          description: Fecha de creación de la noticia
+      example:
+        id: 1
+        title: Noticia de ejemplo
+        author: Iram Gutiérrez
+        createdAt: 2022-09-20T13:48:28.862Z

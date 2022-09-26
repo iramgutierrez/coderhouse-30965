@@ -1,0 +1,20 @@
+# create news item
+paths:
+  /api/news:
+    post:
+      summary: Crear una nueva noticia
+      tags:
+        - News
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewNewsItem'
+      responses:
+        "201":
+          description: Noticia creada
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schemas/News'
