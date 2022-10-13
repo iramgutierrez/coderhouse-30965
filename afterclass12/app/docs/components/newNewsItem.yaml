@@ -1,0 +1,18 @@
+#NewNewsItem
+components:
+  requestBodies:
+    NewNewsItem:
+      type: Object
+      required:
+        - title
+        - author
+      properties:
+        title:
+          type: string
+          description: Titulo de la notica
+        author:
+          type: string
+          description: Autor de la noticia
+      example:
+        title: Noticia de ejemplo
+        author: Iram Gutiérrez

@@ -1,0 +1,16 @@
+#get news
+paths:
+  /api/news:
+    get:
+      summary: Devuelve todas las noticias
+      tags:
+        - News
+      responses:
+        "200":
+          description: Devuelve todas las noticias disponibles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/News'
